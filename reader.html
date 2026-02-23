@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Reader</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ===== Floating Navigation ===== */
+
+    #pageNav {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9999;
+    }
+
+    #toggleNav {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      background: #00c3ff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #pageList {
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      background: #222;
+      padding: 10px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    #pageList button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 6px;
+      border: none;
+      border-radius: 5px;
+      background: #444;
+      color: white;
+      cursor: pointer;
+    }
+
+    #pageList button:hover {
+      background: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="reader-container">
+  <div id="reader-header"></div>
+  <div id="reader"></div>
+</div>
+
+<!-- Navigation góc trái dưới -->
+<div id="pageNav">
+  <button id="toggleNav">☰ Trang</button>
+  <div id="pageList"></div>
+</div>
+
+<script src="js/data.js"></script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const chap = params.get("chap");
+
+  if (id && chap) {
+    localStorage.setItem("lastRead_" + id, chap);
+  }
+
+  const manga = mangaData.find(m => m.id === id);
+
+  if (manga) {
+    const header = document.getElementById("reader-header");
+    header.innerHTML = `
+      <div style="margin-bottom:15px;">
+        <a href="manga.html?id=${id}" 
+           style="color:#00c3ff; font-weight:bold;">
+           ← Quay lại ${manga.title}
+        </a>
+        <h2 style="margin-top:8px;">
+          ${manga.title} - Chapter ${chap}
+        </h2>
+      </div>
+    `;
+  }
+
+  /* ===== Toggle Navigation ===== */
+
+  const toggleNav = document.getElementById("toggleNav");
+  const pageList = document.getElementById("pageList");
+
+  toggleNav.onclick = function () {
+    pageList.style.display =
+      pageList.style.display === "block" ? "none" : "block";
+  };
+</script>
+
+<script src="js/reader.js"></script>
+
+</body>
+</html>

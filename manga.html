@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết Manga</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="manga-detail"></div>
+
+<script src="js/data.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const manga = mangaData.find(m => m.id === id);
+  const container = document.getElementById("manga-detail");
+
+  if (!manga) {
+    container.innerHTML = "<h2>Manga không tồn tại</h2>";
+    throw new Error("Manga not found");
+  }
+
+  // Lấy chapter đã đọc gần nhất
+  const savedChap = localStorage.getItem("lastRead_" + manga.id);
+
+  container.innerHTML = `
+    <div class="manga-info">
+      <img src="${manga.cover}">
+      <div>
+        <h1>${manga.title}</h1>
+        <p>${manga.description}</p>
+
+        <div class="action-buttons">
+          <a class="btn-start" href="reader.html?id=${manga.id}&chap=1">
+            📖 Đọc từ đầu
+          </a>
+
+          ${
+            savedChap
+            ? `<a class="btn-continue" href="reader.html?id=${manga.id}&chap=${savedChap}">
+                 ▶ Tiếp tục đọc (Chap ${savedChap})
+               </a>`
+            : ""
+          }
+        </div>
+      </div>
+    </div>
+
+    <h3>Danh sách chapter</h3>
+    <div class="chapter-grid" id="chapterList"></div>
+
+    <div class="other-manga">
+      <h3>Truyện khác</h3>
+      <div class="other-list" id="otherList"></div>
+    </div>
+  `;
+
+  const chapterList = document.getElementById("chapterList");
+
+  for (let i = 1; i <= manga.totalChapters; i++) {
+    const link = document.createElement("a");
+    link.href = `reader.html?id=${manga.id}&chap=${i}`;
+    link.textContent = `Chapter ${i}`;
+    chapterList.appendChild(link);
+  }
+
+  // Hiển thị truyện khác
+  const otherList = document.getElementById("otherList");
+
+  mangaData
+    .filter(m => m.id !== id)
+    .forEach(m => {
+      const div = document.createElement("div");
+      div.className = "other-item";
+      div.innerHTML = `
+        <a href="manga.html?id=${m.id}">
+          <img src="${m.cover}">
+          <p>${m.title}</p>
+        </a>
+      `;
+      otherList.appendChild(div);
+    });
+</script>
+
+</body>
+</html>
