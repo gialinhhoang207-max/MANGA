@@ -32,7 +32,7 @@ function generateFileNames(pageNumber) {
 
   const names = [];
 
-  for (let digits = 1; digits <= 5; digits++) {
+  for (let digits = 1; digits <= 3; digits++) {
     names.push(pageNumber.toString().padStart(digits, "0"));
   }
 
@@ -143,6 +143,7 @@ window.addEventListener("scroll", () => {
 });
 
 })();
+
 
 
 
