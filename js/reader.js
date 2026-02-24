@@ -25,7 +25,7 @@ const chapterFolder = `${manga.baseFolder}chap${chapNumber}/`;
 console.log("Đang load từ:", chapterFolder);
 
 /* Hỗ trợ nhiều extension */
-const extensions = ["jpg"];
+const extensions = ["jpg","JPG"];
 
 /* Tạo các biến thể số trang (1 → 5 chữ số) */
 function generateFileNames(pageNumber) {
@@ -143,5 +143,6 @@ window.addEventListener("scroll", () => {
 });
 
 })();
+
 
 
