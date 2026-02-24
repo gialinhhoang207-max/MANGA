@@ -4,7 +4,7 @@ const mangaData = [
   {
     id: "manga1",
     title: "[Chimee House (Takapi)] Chiru Roshutsu",
-    cover: CLOUD + "[Chimee_House_(Takapi)]_Chiru_Roshutsu/cover.jpeg",
+    cover: CLOUD + "[Chimee_House_(Takapi)]_Chiru_Roshutsu/cover.jpg",
     baseFolder: CLOUD + "[Chimee_House_(Takapi)]_Chiru_Roshutsu/",
     totalChapters: 23
   },
@@ -28,8 +28,16 @@ const mangaData = [
     cover: CLOUD + "Exhibitionist_Girl_Diary_Collection/cover.jpg",
     baseFolder: CLOUD + "Exhibitionist_Girl_Diary_Collection/",
     totalChapters: 1
-  }
+  },
+  {
+    id: "manga5",
+    title: "[Chimee House (Takapi)] Sachina no Roshutsu Nikki",
+    cover: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/cover.jpg",
+    baseFolder: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/",
+    totalChapters: 23
+  },
 ];
+
 
 
 
