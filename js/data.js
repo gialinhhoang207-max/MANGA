@@ -25,8 +25,9 @@ const mangaData = [
   {
     id: "manga4",
     title: "Exhibitionist Girl Diary Collection",
-    cover: CLOUD + "Exhibitionist_Girl_Diary_Collection/cover.jfif",
+    cover: CLOUD + "Exhibitionist_Girl_Diary_Collection/cover_nms936.jpg",
     baseFolder: CLOUD + "Exhibitionist_Girl_Diary_Collection/",
     totalChapters: 1
   }
 ];
+
