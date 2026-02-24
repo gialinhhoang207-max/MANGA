@@ -20,9 +20,7 @@ const reader = document.getElementById("reader");
 const pageList = document.getElementById("pageList");
 
 /* Encode để tránh lỗi [ ] */
-const chapterFolder = encodeURI(
-  `${manga.baseFolder}chap${chapNumber}/`
-);
+const chapterFolder = `${manga.baseFolder}chap${chapNumber}/`;
 
 console.log("Đang load từ:", chapterFolder);
 
