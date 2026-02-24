@@ -4,8 +4,8 @@ const mangaData = [
   {
     id: "manga1",
     title: "[Chimee House (Takapi)] Chiru Roshutsu",
-    cover: CLOUD + "Chiru_Roshutsu/cover.jpeg",
-    baseFolder: CLOUD + "Chiru_Roshutsu/",
+    cover: CLOUD + "[Chimee_House_(Takapi)]_Chiru_Roshutsu/cover.jpeg",
+    baseFolder: CLOUD + "[Chimee_House_(Takapi)]_Chiru_Roshutsu/",
     totalChapters: 23
   },
   {
@@ -30,6 +30,7 @@ const mangaData = [
     totalChapters: 1
   }
 ];
+
 
 
 
