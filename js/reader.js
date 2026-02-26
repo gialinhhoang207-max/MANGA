@@ -19,6 +19,36 @@ if (!chapNumber) {
 const reader = document.getElementById("reader");
 const pageList = document.getElementById("pageList");
 
+/* ===== Chapter Navigation ===== */
+
+const prevBtn = document.getElementById("prevChap");
+const nextBtn = document.getElementById("nextChap");
+const chapInfo = document.getElementById("chapInfo");
+
+if (prevBtn && nextBtn && chapInfo) {
+
+  chapInfo.textContent = `Chap ${chapNumber} / ${manga.totalChapters}`;
+
+  // Chap trước
+  if (chapNumber > 1) {
+    prevBtn.onclick = function () {
+      window.location.href = `reader.html?id=${id}&chap=${chapNumber - 1}`;
+    };
+  } else {
+    prevBtn.disabled = true;
+  }
+
+  // Chap sau
+  if (chapNumber < manga.totalChapters) {
+    nextBtn.onclick = function () {
+      window.location.href = `reader.html?id=${id}&chap=${chapNumber + 1}`;
+    };
+  } else {
+    nextBtn.disabled = true;
+  }
+
+}
+  
 /* Encode để tránh lỗi [ ] */
 const chapterFolder = `${manga.baseFolder}chap${chapNumber}/`;
 
@@ -143,6 +173,7 @@ window.addEventListener("scroll", () => {
 });
 
 })();
+
 
 
 
