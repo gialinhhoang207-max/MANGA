@@ -33,10 +33,11 @@ const mangaData = [
     id: "manga5",
     title: "[Chimee House (Takapi)] Sachina no Roshutsu Nikki",
     cover: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/cover.jpg",
-    baseFolder: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/",
+    baseFolder: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/",
     totalChapters: 5
   },
 ];
+
 
 
 
