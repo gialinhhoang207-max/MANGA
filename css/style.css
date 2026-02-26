@@ -377,3 +377,12 @@ a:hover {
   font-size: 14px;
   color: #bbb;
 }
+
+.top-nav {
+  margin-bottom: 25px;
+}
+
+.bottom-nav {
+  margin-top: 40px;
+}
+
