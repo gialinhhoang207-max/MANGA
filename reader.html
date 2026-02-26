@@ -50,26 +50,48 @@
     #pageList button:hover {
       background: #666;
     }
+
+    /* ===== Chapter Navigation spacing ===== */
+
+    .top-nav {
+      margin-bottom: 25px;
+    }
+
+    .bottom-nav {
+      margin-top: 40px;
+    }
   </style>
 </head>
 
 <body>
 
 <div id="reader-container">
+
   <div id="reader-header"></div>
+
+  <!-- ===== NÚT CHUYỂN CHAP TRÊN ===== -->
+  <div class="chapter-nav top-nav">
+    <button class="prevChap">← Chap trước</button>
+    <span class="chapInfo"></span>
+    <button class="nextChap">Chap sau →</button>
+  </div>
+
   <div id="reader"></div>
+
+  <!-- ===== NÚT CHUYỂN CHAP DƯỚI ===== -->
+  <div class="chapter-nav bottom-nav">
+    <button class="prevChap">← Chap trước</button>
+    <span class="chapInfo"></span>
+    <button class="nextChap">Chap sau →</button>
+  </div>
+
 </div>
 
-<!-- Navigation góc trái dưới -->
+<!-- ===== Navigation góc trái dưới ===== -->
+
 <div id="pageNav">
   <button id="toggleNav">☰ Trang</button>
   <div id="pageList"></div>
-</div>
-
-<div id="chapterNav" class="chapter-nav">
-  <button id="prevChap">← Chap trước</button>
-  <span id="chapInfo"></span>
-  <button id="nextChap">Chap sau →</button>
 </div>
 
 <script src="js/data.js"></script>
@@ -114,7 +136,4 @@
 <script src="js/reader.js" defer></script>
 
 </body>
-
 </html>
-
-
