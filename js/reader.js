@@ -19,45 +19,71 @@ if (!chapNumber) {
 const reader = document.getElementById("reader");
 const pageList = document.getElementById("pageList");
 
-/* ===== Chapter Navigation ===== */
 
-const prevBtn = document.getElementById("prevChap");
-const nextBtn = document.getElementById("nextChap");
-const chapInfo = document.getElementById("chapInfo");
+/* =====================================================
+   CHAPTER NAVIGATION (Top + Bottom)
+===================================================== */
 
-if (prevBtn && nextBtn && chapInfo) {
+const prevButtons = document.querySelectorAll(".prevChap");
+const nextButtons = document.querySelectorAll(".nextChap");
+const chapInfos = document.querySelectorAll(".chapInfo");
 
-  chapInfo.textContent = `Chap ${chapNumber} / ${manga.totalChapters}`;
+chapInfos.forEach(info => {
+  info.textContent = `Chap ${chapNumber} / ${manga.totalChapters}`;
+});
 
-  // Chap trước
-  if (chapNumber > 1) {
-    prevBtn.onclick = function () {
+// ===== Chap trước =====
+if (chapNumber > 1) {
+
+  prevButtons.forEach(btn => {
+    btn.onclick = function () {
+      window.scrollTo(0, 0);
       window.location.href = `reader.html?id=${id}&chap=${chapNumber - 1}`;
     };
-  } else {
-    prevBtn.disabled = true;
-  }
+  });
 
-  // Chap sau
-  if (chapNumber < manga.totalChapters) {
-    nextBtn.onclick = function () {
+} else {
+  prevButtons.forEach(btn => btn.disabled = true);
+}
+
+// ===== Chap sau =====
+if (chapNumber < manga.totalChapters) {
+
+  nextButtons.forEach(btn => {
+    btn.onclick = function () {
+      window.scrollTo(0, 0);
       window.location.href = `reader.html?id=${id}&chap=${chapNumber + 1}`;
     };
-  } else {
-    nextBtn.disabled = true;
+  });
+
+} else {
+  nextButtons.forEach(btn => btn.disabled = true);
+}
+
+// ===== Phím mũi tên để chuyển chap =====
+document.addEventListener("keydown", function (e) {
+
+  if (e.key === "ArrowLeft" && chapNumber > 1) {
+    window.location.href = `reader.html?id=${id}&chap=${chapNumber - 1}`;
   }
 
-}
-  
-/* Encode để tránh lỗi [ ] */
+  if (e.key === "ArrowRight" && chapNumber < manga.totalChapters) {
+    window.location.href = `reader.html?id=${id}&chap=${chapNumber + 1}`;
+  }
+
+});
+
+
+/* =====================================================
+   LOAD CHAPTER IMAGES
+===================================================== */
+
 const chapterFolder = `${manga.baseFolder}chap${chapNumber}/`;
 
 console.log("Đang load từ:", chapterFolder);
 
-/* Hỗ trợ nhiều extension */
 const extensions = ["jpg"];
 
-/* Tạo các biến thể số trang (1 → 5 chữ số) */
 function generateFileNames(pageNumber) {
 
   const names = [];
@@ -74,7 +100,6 @@ function generateFileNames(pageNumber) {
 let pageIndex = 1;
 let stop = false;
 
-/* ===== Tạo nút trang ===== */
 
 function createPageButton(pageNumber) {
 
@@ -95,7 +120,6 @@ function createPageButton(pageNumber) {
   pageList.appendChild(btn);
 }
 
-/* ===== Load ảnh ===== */
 
 async function loadPage(pageNumber) {
 
@@ -123,7 +147,6 @@ async function loadPage(pageNumber) {
 
         reader.appendChild(img);
 
-        /* Tạo nút trong menu */
         createPageButton(pageNumber);
 
         pageIndex++;
@@ -146,7 +169,9 @@ async function loadPage(pageNumber) {
 loadPage(pageIndex);
 
 
-/* ===== Highlight trang đang xem ===== */
+/* =====================================================
+   Highlight trang đang xem
+===================================================== */
 
 window.addEventListener("scroll", () => {
 
@@ -173,10 +198,3 @@ window.addEventListener("scroll", () => {
 });
 
 })();
-
-
-
-
-
-
-
