@@ -27,16 +27,17 @@ const mangaData = [
     title: "Exhibitionist Girl Diary Collection",
     cover: CLOUD + "Exhibitionist_Girl_Diary_Collection/cover.jpg",
     baseFolder: CLOUD + "Exhibitionist_Girl_Diary_Collection/",
-    totalChapters: 1
+    totalChapters: 25
   },
   {
     id: "manga5",
     title: "[Chimee House (Takapi)] Sachina no Roshutsu Nikki",
     cover: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/cover.jpg",
     baseFolder: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/",
-    totalChapters: 23
+    totalChapters: 5
   },
 ];
+
 
 
 
