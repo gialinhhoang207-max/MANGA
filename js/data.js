@@ -37,13 +37,14 @@ const mangaData = [
     totalChapters: 5
   },
   {
-    id: "manga2",
+    id: "manga6",
     title: "[Yamamoto Naoki] Hotta",
     cover: CLOUD + "Hotta/cover.jpg",
     baseFolder: CLOUD + "Hotta/",
     totalChapters: 18
   }
 ];
+
 
 
 
