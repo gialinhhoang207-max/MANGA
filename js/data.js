@@ -36,7 +36,15 @@ const mangaData = [
     baseFolder: CLOUD + "[Chimee_House_(Takapi)]_Sachina_no_Roshutsu_Nikki/",
     totalChapters: 5
   },
+  {
+    id: "manga2",
+    title: "[Yamamoto Naoki] Hotta",
+    cover: CLOUD + "Hotta/cover.jpg",
+    baseFolder: CLOUD + "Hotta/",
+    totalChapters: 18
+  }
 ];
+
 
 
 
