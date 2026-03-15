@@ -69,7 +69,14 @@ const mangaData = [
     title: "Suzumiya Haruhi no Yuuutsu",
     cover: CLOUD + "[valssu_(Charu)]_Nagato_Yuki_no_Karada_no_Uzuki_(Suzumiya_Haruhi_no_Yuuutsu)/cover.jpg",
     baseFolder: CLOUD + "[valssu_(Charu)]_Nagato_Yuki_no_Karada_no_Uzuki_(Suzumiya_Haruhi_no_Yuuutsu)/",
-    totalChapters: 1
+    totalChapters: 2
+  },  
+  {  
+    id: "manga11",
+    title: "[valssu (Charu)] Massage-ten de Seibetsu o Machigaerarete Mesu ni Sareta Vtuber Soushuuhen + Haishin Gamen no Mukougawa (Oozora Subaru)",
+    cover: CLOUD + "[valssu_(Charu)]_Nagato_Yuki_no_Karada_no_Uzuki_(Suzumiya_Haruhi_no_Yuuutsu)/cover.jpg",
+    baseFolder: CLOUD + "[valssu_(Charu)]_Nagato_Yuki_no_Karada_no_Uzuki_(Suzumiya_Haruhi_no_Yuuutsu)/",
+    totalChapters: 10
   }
 ];
 
