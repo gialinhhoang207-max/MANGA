@@ -386,12 +386,26 @@ a:hover {
   margin-top: 40px;
 }
 
+/* HEADER */
+
 .site-header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#111;
+  border-bottom:2px solid #444;
+}
+
+/* phần trên */
+
+.header-top{
   display:flex;
+  justify-content:space-between;
   align-items:center;
   padding:10px 20px;
-  background:#111;
 }
+
+/* logo */
 
 .logo-link{
   display:flex;
@@ -400,12 +414,40 @@ a:hover {
 }
 
 .logo{
-  height:50px;
+  height:45px;
   margin-right:10px;
 }
 
 .site-title{
-  color:white;
-  font-size:24px;
+  font-size:22px;
   font-weight:bold;
+  color:white;
+}
+
+/* search */
+
+.header-search input{
+  padding:6px 10px;
+  border-radius:5px;
+  border:none;
+  outline:none;
+}
+
+/* menu */
+
+.main-nav{
+  display:flex;
+  gap:20px;
+  padding:8px 20px;
+  background:#1a1a1a;
+}
+
+.main-nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.main-nav a:hover{
+  color:#ffcc00;
 }
