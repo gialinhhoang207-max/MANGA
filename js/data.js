@@ -56,6 +56,13 @@ const mangaData = [
     cover: CLOUD + "Mizushima-san_wa_roshutsushou/cover.jpg",
     baseFolder: CLOUD + "Mizushima-san_wa_roshutsushou/",
     totalChapters: 5
+  },
+  {  
+    id: "manga9",
+    title: "[valssu (Charu)] Hibiki no Jansen",
+    cover: CLOUD + "[valssu_(Charu)]_Hibiki_no_Jansen/cover.jpg",
+    baseFolder: CLOUD + "[valssu_(Charu)]_Hibiki_no_Jansen/",
+    totalChapters: 2
   }
 ];
 
