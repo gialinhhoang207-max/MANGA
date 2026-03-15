@@ -395,7 +395,26 @@ a:hover {
   padding:10px 20px;
 }
 
+.site-header{
+  display:flex;
+  align-items:center;
+  padding:10px 20px;
+  background:#111;
+}
+
+.logo-link{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
 .logo{
   height:50px;
-  background:#111;
+  margin-right:10px;
+}
+
+.site-title{
+  color:white;
+  font-size:24px;
+  font-weight:bold;
 }
