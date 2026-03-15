@@ -391,6 +391,7 @@ a:hover {
   align-items:center;
   padding:10px 20px;
   background:#111;
+  border-bottom:2px solid #444;
 }
 
 .logo-link{
