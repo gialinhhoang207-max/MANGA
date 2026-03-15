@@ -42,6 +42,20 @@ const mangaData = [
     cover: CLOUD + "Hotta/cover.jpg",
     baseFolder: CLOUD + "Hotta/",
     totalChapters: 18
+  },
+  {
+    id: "manga7",
+    title: "Roshutsu shoujo yuugi aida",
+    cover: CLOUD + "roshutsu_shoujo_yuugi_aida/cover.jpg",
+    baseFolder: CLOUD + "roshutsu_shoujo_yuugi_aida/",
+    totalChapters: 4
+  },
+  {
+    id: "manga8",
+    title: "Mizushima-san wa roshutsushou",
+    cover: CLOUD + "Mizushima-san_wa_roshutsushou/cover.jpg",
+    baseFolder: CLOUD + "Mizushima-san_wa_roshutsushou/",
+    totalChapters: 5
   }
 ];
 
