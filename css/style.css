@@ -389,9 +389,14 @@ a:hover {
 .site-header{
   display:flex;
   align-items:center;
-  padding:10px 20px;
+  padding:12px 20px;
   background:#111;
-  border-bottom:2px solid #444;
+
+  /* đường kẻ */
+  border-bottom:4px solid #222;
+
+  /* tạo khoảng cách với nội dung */
+  margin-bottom:20px;
 }
 
 .logo-link{
