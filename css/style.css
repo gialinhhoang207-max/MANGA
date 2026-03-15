@@ -386,3 +386,15 @@ a:hover {
   margin-top: 40px;
 }
 
+.site-header{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  background:#111;
+  color:white;
+  padding:10px 20px;
+}
+
+.logo{
+  height:50px;
+}
