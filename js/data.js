@@ -63,6 +63,13 @@ const mangaData = [
     cover: CLOUD + "[valssu_(Charu)]_Hibiki_no_Jansen/cover.jpg",
     baseFolder: CLOUD + "[valssu_(Charu)]_Hibiki_no_Jansen/",
     totalChapters: 2
+  },
+  {  
+    id: "manga10",
+    title: "[valssu (Charu)] Nagato Yuki no Karada no Uzuki (Suzumiya Haruhi no Yuuutsu)",
+    cover: CLOUD + "[valssu_(Charu)]_Nagato_Yuki_no_Karada_no_Uzuki_(Suzumiya_Haruhi_no_Yuuutsu)/cover.jpg",
+    baseFolder: CLOUD + "[valssu_(Charu)]_Nagato_Yuki_no_Karada_no_Uzuki_(Suzumiya_Haruhi_no_Yuuutsu)/",
+    totalChapters: 1
   }
 ];
 
