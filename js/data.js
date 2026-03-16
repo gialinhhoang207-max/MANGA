@@ -79,7 +79,7 @@ const mangaData = [
     totalChapters: 6
   },  
   {  
-    id: "manga11",
+    id: "manga12",
     title: "Doukyo Suru Neneki - Slime living together",
     cover: CLOUD + "Doukyo_Suru_Neneki_-_Slime_living_together/cover.jpg",
     baseFolder: CLOUD + "Doukyo_Suru_Neneki_-_Slime_living_together/",
