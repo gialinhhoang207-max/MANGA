@@ -77,6 +77,13 @@ const mangaData = [
     cover: CLOUD + "[valssu_(Charu)]Massage-ten_de_Seibetsu_o_Machigaerarete_Mesu_ni_Sareta_Vtuber_Chuu(Oozora_Subaru)/cover.jpg",
     baseFolder: CLOUD + "[valssu_(Charu)]Massage-ten_de_Seibetsu_o_Machigaerarete_Mesu_ni_Sareta_Vtuber_Chuu(Oozora_Subaru)/",
     totalChapters: 6
+  },  
+  {  
+    id: "manga11",
+    title: "Doukyo Suru Neneki - Slime living together",
+    cover: CLOUD + "Doukyo_Suru_Neneki_-_Slime_living_together/cover.jpg",
+    baseFolder: CLOUD + "Doukyo_Suru_Neneki_-_Slime_living_together/",
+    totalChapters: 12
   }
 ];
 
