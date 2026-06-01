@@ -84,6 +84,13 @@ const mangaData = [
     cover: CLOUD + "Doukyo_Suru_Neneki_-_Slime_living_together/cover.jpg",
     baseFolder: CLOUD + "Doukyo_Suru_Neneki_-_Slime_living_together/",
     totalChapters: 12
+  },  
+  {  
+    id: "manga13",
+    title: "[valssu (Charu)] Konyoku Rotenburo de Bishoujo Futari kara are o Misete to Onegai Sareta Hanashi",
+    cover: CLOUD + "[valssu_(Charu)]_Konyoku_Rotenburo_de_Bishoujo_Futari_kara_are_o_Misete_to_Onegai_Sareta_Hanashi/cover.jpg",
+    baseFolder: CLOUD + "[valssu_(Charu)]_Konyoku_Rotenburo_de_Bishoujo_Futari_kara_are_o_Misete_to_Onegai_Sareta_Hanashi/",
+    totalChapters: 6
   }
 ];
 
